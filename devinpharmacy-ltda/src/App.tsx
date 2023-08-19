@@ -1,8 +1,10 @@
+import { RoutesApp } from "./routes";
+import { BrowserRouter } from "react-router-dom";
 function App() {
   return (
-    <>
-      <p>Hello World</p>
-    </>
+    <BrowserRouter>
+      <RoutesApp />
+    </BrowserRouter>
   );
 }
 export default App;
