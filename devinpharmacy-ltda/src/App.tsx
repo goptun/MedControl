@@ -1,9 +1,12 @@
 import { RoutesApp } from "./routes";
 import { BrowserRouter } from "react-router-dom";
+import { AppProvider } from "./context";
 function App() {
   return (
     <BrowserRouter>
-      <RoutesApp />
+      <AppProvider>
+        <RoutesApp />
+      </AppProvider>
     </BrowserRouter>
   );
 }
