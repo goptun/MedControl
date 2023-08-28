@@ -1,9 +1,9 @@
 import { PrivateRoutes } from "./privateRoutes";
 import { PublicRoutes } from "./publicRoutes";
-import { useApp } from "../hooks/useApp";
+import { useLogin } from "../context/useLogin";
 
 function RoutesApp() {
-  const { value } = useApp();
+  const { value } = useLogin();
 
   if (value?.email) {
     return <PrivateRoutes />;

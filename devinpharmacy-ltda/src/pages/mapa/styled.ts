@@ -1,5 +1,6 @@
 import styled from "styled-components";
-export const PageUsersMain = styled.main`
+export const PageStorageMain = styled.main`
+  margin-top: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -7,6 +8,7 @@ export const PageUsersMain = styled.main`
   width: 100%;
   div {
     display: flex;
+    align-items: center;
     p {
       padding: 8px;
     }

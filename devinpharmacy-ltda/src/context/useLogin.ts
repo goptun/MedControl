@@ -1,7 +1,7 @@
 import { useContext } from "react";
-import { AppContext } from "../context";
+import { AppContext } from "../context/dadosLogin";
 
-function useApp() {
+function useLogin() {
   const context = useContext(AppContext);
 
   if (!context) {
@@ -11,4 +11,4 @@ function useApp() {
   return context;
 }
 
-export { useApp };
+export { useLogin };
