@@ -1,5 +1,4 @@
 import { Routes, Route } from "react-router-dom";
-import { Home } from "../pages/home";
 import { Mapas } from "../pages/mapa";
 import { CadastraMedicamento } from "../pages/cadastraMedicamento";
 import { ListaMedicamentos } from "../pages/listaMedicamentos";
@@ -10,7 +9,7 @@ import { CadastraFarmacia } from "../pages/cadastraFarmacia/Index";
 function PrivateRoutes() {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/" element={<Mapas />} />
       <Route path="/mapa" element={<Mapas />} />
       <Route path="/cadastra-farmacia" element={<CadastraFarmacia />} />
       <Route path="/cadastra-medicamentos" element={<CadastraMedicamento />} />

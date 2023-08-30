@@ -7,6 +7,7 @@ const FooterStyled = styled.footer`
   margin-top: 2em;
   padding-bottom: 1em;
   bottom: 0;
+  position: fixed;
 
   .button-styled {
     display: flex;

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { ListaStyled } from "./styled";
 import { CardMedicamento } from "../../components/CardMedicamento";
 import { Header } from "../../components/Header";
-import { Footer } from "../../components/Footer";
 
 import { TextField } from "@mui/material";
 
@@ -75,7 +74,6 @@ const ListaMedicamentos: React.FC = () => {
           <div>Este medicamento não está cadastrado.</div>
         ) : null}
       </div>
-      <Footer />
     </ListaStyled>
   );
 };
