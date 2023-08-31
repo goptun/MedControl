@@ -20,6 +20,7 @@ interface Medicamento {
 }
 
 const FormCadastraMedicamento: React.FC = () => {
+  //Propriedades de construção do objeto medicamento
   const [medicamento, setMedicamento] = useState<Medicamento>({
     id: Math.random(),
     medicamento: "",
@@ -30,10 +31,12 @@ const FormCadastraMedicamento: React.FC = () => {
     descricao: "",
   });
 
+  //Array que armazena os medicamentos cadastrados no localStorage
   const listaMedicamentos: Medicamento[] = JSON.parse(
     localStorage.getItem("ListaMedicamentos") || "[]"
   );
 
+  //Função que armazena no localStorage por array os dados do medicamento cadastrado
   const armazenaMedicamento = (e: React.FormEvent) => {
     e.preventDefault();
     listaMedicamentos.push(medicamento);

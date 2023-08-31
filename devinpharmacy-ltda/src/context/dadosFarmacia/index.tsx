@@ -1,5 +1,6 @@
 import { createContext, useContext, useState, ReactNode } from "react";
 
+//Contexto para armazenar os dados da farmácia, como o CEP e a latitude e longitude.
 interface LatLng {
   latitude: string;
   longitude: string;

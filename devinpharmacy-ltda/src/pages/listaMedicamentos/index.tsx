@@ -14,21 +14,24 @@ interface Medicamento {
   tipo: string;
   laboratorio: string;
 }
-
+//Lista de medicamentos cadastrados no localStorage
 const ListaMedicamentos: React.FC = () => {
   const listaMedicamentos: Medicamento[] | null = JSON.parse(
     localStorage.getItem("ListaMedicamentos") || "null"
   );
+  //Declaração de estado para a lista de medicamentos cadastrados e excluídos
   const [listaAnterior, setListaAnterior] = useState<Medicamento[] | null>(
     JSON.parse(localStorage.getItem("ListaMedicamentos") || "null")
   );
   let novaLista: Medicamento[] | null;
 
+  //Declaração de estado para o filtro de pesquisa
   const [filtrado, setFiltro] = useState<Medicamento[] | null>(
     listaMedicamentos
   );
   const [termo, setTermo] = useState<string>("");
 
+  //Função que exclui o medicamento da lista
   function apagaMedicamento(id: number) {
     novaLista = listaAnterior?.filter((item) => item.id !== id) || null;
     localStorage.setItem("ListaMedicamentos", JSON.stringify(novaLista));

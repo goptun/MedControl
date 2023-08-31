@@ -25,8 +25,8 @@ function Header() {
   return (
     <HeaderStyled>
       <NavStyled>
-        <img src="/logo.svg" alt="DEVinPharmacy" />
-        <a href="/">DEVinPharmacy</a>
+        <img src="/logo.svg" alt="MedControl" />
+        <a href="/">MedControl</a>
       </NavStyled>
 
       <NavStyled>

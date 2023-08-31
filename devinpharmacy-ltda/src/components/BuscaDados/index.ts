@@ -1,3 +1,5 @@
+// Função para buscar os dados no localStorage e caso não exista, cria os dados iniciais da farmácia e do medicamento.
+
 function BuscaDados(): void {
   let primeiraFarmacia = [
     {
@@ -19,7 +21,6 @@ function BuscaDados(): void {
       longitude: "-48.511791875125546",
     },
   ];
-
   let primeiroMedicamento = [
     {
       id: Math.random(),

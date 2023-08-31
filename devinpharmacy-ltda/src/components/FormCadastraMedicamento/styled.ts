@@ -52,4 +52,13 @@ export const FormCadastraStyled = styled.form`
     justify-content: center;
     margin-top: 1rem;
   }
+
+  @media (max-width: 768px) {
+    .form-control1,
+    .form-control2,
+    .form-control3,
+    .form-control4 {
+      grid-template-columns: 1fr;
+    }
+  }
 `;

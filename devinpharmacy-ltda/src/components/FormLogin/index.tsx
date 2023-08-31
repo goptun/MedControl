@@ -1,3 +1,4 @@
+// Arquivo responsável pelo formulário de login da aplicação MedControl
 import { useForm } from "react-hook-form";
 import { useLogin } from "../../context/useLogin";
 import { Button, TextField, Box } from "@mui/material";
@@ -7,6 +8,33 @@ interface FormValues {
   email: string;
   password: string;
 }
+
+// Não consegui validar o campo de senha com o react-hook-form, então tentei fazer de forma manual, mas não consegui fazer funcionar.
+
+// function FormLogin() {
+//   const { register, handleSubmit } = useForm<FormValues>();
+//   const { setValue } = useLogin();
+//   const [senha, setSenha] = useState("");
+
+//   const onSubmit = (dataFromForm: FormValues) => {
+//     console.log("Email:", dataFromForm.email);
+//     console.log("Senha:", dataFromForm.password);
+
+//     if (
+//       dataFromForm.email === "matheus@dev.com" &&
+//       dataFromForm.password === "1234qwer"
+//     ) {
+//       console.log("Credenciais corretas, efetuando login...");
+//       const user = {
+//         email: dataFromForm.email,
+//         password: dataFromForm.password,
+//       };
+//       setValue(JSON.stringify(user)); // Convert user object to JSON string
+//     } else {
+//       console.log("Credenciais inválidas");
+//       alert("Credenciais inválidas. Verifique seu email e senha.");
+//     }
+//   };
 
 function FormLogin() {
   const { register, handleSubmit } = useForm<FormValues>();
@@ -35,7 +63,7 @@ function FormLogin() {
           fontFamily: "JetBrains Mono, monospace",
         }}
       >
-        DEVinPharmacy
+        MedControl
       </h1>
 
       <h5
@@ -43,7 +71,7 @@ function FormLogin() {
           fontFamily: "JetBrains Mono, monospace",
         }}
       >
-        Faça Login para acessar o site:
+        Insira suas credenciais para acessar:
       </h5>
       <TextField
         label="E-mail"
@@ -90,7 +118,7 @@ function FormLogin() {
         <p>{senha.search(/[0-9]/) !== -1 ? "✅" : "⛔"} Pelo menos 1 número</p>
       </Box>
 
-      <Button type="submit">Entrar</Button>
+      <Button type="submit">Acessar</Button>
     </form>
   );
 }

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FormCardStyled } from "./styled";
+import { Card, CardContent, Button } from "@mui/material";
 
 interface CardMedicamentoProps {
   dosagem: string;
@@ -12,6 +12,7 @@ interface CardMedicamentoProps {
   excluir: (id: number) => void;
 }
 
+//A função CardMedicamento recebe como parâmetro um objeto com as seguintes propriedades:
 function CardMedicamento({
   dosagem,
   medicamento,
@@ -22,6 +23,7 @@ function CardMedicamento({
   descricao,
   excluir,
 }: CardMedicamentoProps) {
+  //O id é convertido para string e depois é criada uma nova variável chamada novoId que recebe o id convertido para string.
   let novoId = id.toString();
 
   const [detalhesVisiveis, setDetalhesVisiveis] = useState(false);
@@ -34,57 +36,96 @@ function CardMedicamento({
     setDetalhesVisiveis(false);
   };
 
+  // O componente CardMedicamento retorna um Card do Material UI com as informações do medicamento.
   return (
-    <FormCardStyled>
-      <h5>{medicamento}</h5>
-      <h6>{dosagem}</h6>
+    <Card
+      sx={{
+        backgroundColor: "#F5F5F5",
+        borderRadius: "5px",
+        boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
+        padding: "5px",
+        margin: "5px",
+        fontFamily: "JetBrains Mono, monospace",
+        textAlign: "left",
+        h5: {
+          fontSize: "1rem",
+          fontWeight: "bold",
+          margin: "5px",
+        },
+        h6: {
+          fontSize: "0.8rem",
+          fontWeight: "normal",
+          margin: "5px",
+        },
+        span: {
+          fontSize: "0.8rem",
+          fontWeight: "normal",
+          margin: "5px",
+        },
 
-      {!detalhesVisiveis && (
-        <button onClick={mostrarDetalhes}>Mostrar Detalhes</button>
-      )}
+        "@media (max-width: 600px)": {
+          gridTemplateColumns: "1fr",
+          gridTemplateRows: "auto",
+          textAlign: "left",
+        },
+      }}
+    >
+      <CardContent>
+        <h5>{medicamento}</h5>
+        <h6>{dosagem}</h6>
+        <br />
+        {!detalhesVisiveis && (
+          <Button onClick={mostrarDetalhes}>Mostrar Detalhes</Button>
+        )}
 
-      {detalhesVisiveis && (
-        <div id={`a${novoId.substring(2, 13)}`}>
-          <h5 id={`a${novoId.substring(2, 13)}`}>Detalhes do medicamento:</h5>
-          <div>
-            <span>
-              <b>Medicamento:</b> {medicamento}
-            </span>
+        {detalhesVisiveis && (
+          <div id={`a${novoId.substring(2, 13)}`}>
+            <h5 id={`a${novoId.substring(2, 13)}`}>Detalhes do medicamento:</h5>
             <br />
-            <span>
-              <b>Dosagem:</b> {dosagem}
-            </span>
-            <br />
-            <span>
-              <b>Laboratório:</b> {laboratorio}
-            </span>
-            <br />
-            <span>
-              <b>Tipo:</b> {tipo}
-            </span>
-            <br />
-            <span>
-              <b>Preço:</b> R$ {preco}
-            </span>
-            <br />
-            {descricao ? (
+            <div>
               <span>
-                <b>Descrição:</b> {descricao}
-                <br />
+                <b>Medicamento:</b> {medicamento}
               </span>
-            ) : null}
+              <br />
+              <span>
+                <b>Dosagem:</b> {dosagem}
+              </span>
+              <br />
+              <span>
+                <b>Laboratório:</b> {laboratorio}
+              </span>
+              <br />
+              <span>
+                <b>Tipo:</b> {tipo}
+              </span>
+              <br />
+              <span>
+                <b>Preço:</b> R$ {preco}
+              </span>
+              <br />
+              {descricao ? (
+                <span>
+                  <b>Descrição:</b> {descricao}
+                  <br />
+                </span>
+              ) : null}
+            </div>
+
+            <Button
+              style={{ margin: "5px" }}
+              onClick={() => {
+                excluir(id);
+              }}
+            >
+              Excluir
+            </Button>
+            <Button style={{ margin: "5px" }} onClick={ocultarDetalhes}>
+              Ocultar Detalhes
+            </Button>
           </div>
-          <button
-            onClick={() => {
-              excluir(id);
-            }}
-          >
-            Excluir
-          </button>
-          <button onClick={ocultarDetalhes}>Ocultar Detalhes</button>
-        </div>
-      )}
-    </FormCardStyled>
+        )}
+      </CardContent>
+    </Card>
   );
 }
 

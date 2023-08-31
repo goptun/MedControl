@@ -4,8 +4,8 @@ import { Box } from "@mui/material";
 function EstruturaAjuda() {
   return (
     <EstruturaStyled>
-      <h4>Como posso te ajudar?</h4>
-      <p>Confira as principais dúvidas de uso do DEVinPharmacy:</p>
+      <h4>Precisa de ajuda?</h4>
+      <p>Confira abaixo as principais dúvidas de uso:</p>
       <br />
 
       <h4>Sobre o Login</h4>
@@ -78,7 +78,7 @@ function EstruturaAjuda() {
       <Box className="box-control" component="fieldset">
         <ul>
           <li>
-            No processo de criar e visualizar o mapa no DEVinPharmacy, fizemos
+            No processo de criar e visualizar o mapa no MedControl, fizemos
             várias integrações com APIs de terceiros. Isso significa que, de vez
             em quando, esses serviços podem estar temporariamente indisponíveis.
           </li>

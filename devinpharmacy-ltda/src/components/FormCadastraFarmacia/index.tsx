@@ -20,8 +20,11 @@ function FormCadastraFarmacia({
   lat,
   lng,
 }: FormCadastraFarmaciaProps) {
+  //Variável que armazena os dados da farmácia
   const { cepInformado, setCepInformado } = useDadosFarmacia();
   const [farmacia, setFarmacia] = useState<any>({});
+
+  //Array que armazena as farmácias cadastradas no localStorage
   let listaFarmacias: any[] = JSON.parse(
     localStorage.getItem("ListaFarmacias") || "[]"
   );
@@ -37,6 +40,7 @@ function FormCadastraFarmacia({
     });
   }, [cepInformado, bairro, localidade, logradouro, uf, lat, lng]);
 
+  //Aqui a função armazena no localStorage por array os dados da farmácia cadastrada
   function armazenaFarmacia() {
     const newFarmacia = {
       ...farmacia,
@@ -49,6 +53,7 @@ function FormCadastraFarmacia({
   }
 
   return (
+    //Retorna o formulário de cadastro de farmácia
     <div onLoad={() => document.getElementById("reset")?.click()}>
       <FormCadastraFarmaciaStyled
         autoComplete="off"

@@ -1,6 +1,6 @@
 //Componente responsável por renderizar o mapa com as farmácias cadastradas.
 
-import { TileLayer, Marker, Popup } from "react-leaflet";
+import { TileLayer, Marker } from "react-leaflet";
 import { MapContainerStyled, PopupStyled } from "./styled";
 
 //Declaração do componente EstruturaMapa
