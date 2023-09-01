@@ -99,5 +99,8 @@ O **MedControl** é uma solução para gerenciar o cadastro de medicamentos e fa
  - **Autenticação e Perfil de Usuário:** Implementar autenticação para permitir que os usuários criem perfis individuais, onde possam armazenar suas informações.
 
 
-### [Link do vídeo](www.example.com)
+### [Link do vídeo](https://drive.google.com/file/d/1Jvxo4A3QH_bFgkeMAnNBJLBpK6pgvMvu/view?usp=sharing)
 
+### Deploy:
+
+- Não consegui realizar o deploy da aplicacação.
