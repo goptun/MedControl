@@ -1,5 +1,3 @@
-
-
 # DEVinHouse - Clamed
 
 #### Módulo 1 - Projeto Avaliativo
@@ -36,32 +34,43 @@ O **MedControl** é uma solução para gerenciar o cadastro de medicamentos e fa
 ### Visualização da Aplicação :
 
 #### Página de Login:
-![login](https://github.com/goptun/M1S13/assets/133844138/6ef97055-5e94-42a5-9e95-b9b826a42a1f)
+
+![login](https://github.com/goptun/MedControl/assets/133844138/607b684e-9fc8-4e1e-a245-6c76418e0aef)
+
 
 #### Página Inicial (redireciona para o mapa):
 
-![home](https://github.com/goptun/M1S13/assets/133844138/8e95a3e9-80d3-4fd2-bbb0-62706a0071a1)
+![home](https://github.com/goptun/MedControl/assets/133844138/a82468c3-0d0f-4e20-ab3e-47fc8371d040)
+
 
 #### Página Cadastro de Farmácias:
 
-![cadastraFarmacia](https://github.com/goptun/M1S13/assets/133844138/7bbdc552-a1a8-40f3-a226-a26ee7f1f581)
+![cadastraFarmacia](https://github.com/goptun/MedControl/assets/133844138/a26801f3-006a-4dc6-a037-db4e35d7417e)
+
 
 #### Página Cadastro de Medicamentos:
 
-![cadastraMedicamentos](https://github.com/goptun/M1S13/assets/133844138/92ffd2bd-377b-498e-a282-0d174f435220)
+![cadastraMedicamento](https://github.com/goptun/MedControl/assets/133844138/cc963440-bd6b-4dd2-a768-bbb397c5bb4f)
+
 
 #### Página Lista de Medicamentos:
 
-![listaMedicamentos](https://github.com/goptun/M1S13/assets/133844138/319113c3-55a9-4561-a548-03433994cee3)
+![listaMedicamentos](https://github.com/goptun/MedControl/assets/133844138/53874112-291e-4710-9199-43f8f4d75833)
 
 
 #### Página de Ajuda:
 
-![ajuda](https://github.com/goptun/M1S13/assets/133844138/747c4d01-af6b-4829-9cc1-fe16f1268754)
+![ajuda](https://github.com/goptun/MedControl/assets/133844138/7bd6734c-379b-4af7-a819-e4fd001ed43d)
+
 
 #### Página do Mapa (com detalhes):
 
-![mapadetails](https://github.com/goptun/M1S13/assets/133844138/68c6ed3f-75e9-486e-b895-33482f977b74)
+![mapa](https://github.com/goptun/MedControl/assets/133844138/2c8ebfd8-0884-4375-84b2-4aacfa4ab997)
+
+
+#### Página de Error 404:
+
+![error](https://github.com/goptun/MedControl/assets/133844138/4dc030e5-980c-4796-89ac-8ef0336b0373)
 
 
 ### Instruções de uso:
